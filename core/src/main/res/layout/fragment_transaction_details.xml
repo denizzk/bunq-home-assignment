@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/small_cell_height"
+    android:paddingStart="@dimen/spacing_XL"
+    android:paddingEnd="@dimen/spacing_XL">
+
+    <View
+        android:layout_width="100dp"
+        android:layout_height="3dp"
+        android:layout_marginVertical="@dimen/spacing_M"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textSectionHeader"
+        style="@style/TextH2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:minHeight="@dimen/default_cell_height"
+        android:paddingStart="@dimen/spacing_XL"
+        android:paddingEnd="@dimen/spacing_XL"
+        android:paddingBottom="4dp"
+        android:text="@string/payment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/small_cell_height"
+        android:paddingHorizontal="@dimen/spacing_XL"
+        android:paddingVertical="@dimen/spacing_XXL"
+        app:layout_constraintStart_toStartOf="@id/textSectionHeader"
+        app:layout_constraintTop_toBottomOf="@id/textSectionHeader">
+
+        <TextView
+            style="@style/TextLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minWidth="60dp"
+            android:paddingEnd="@dimen/spacing_XL"
+            android:text="@string/amount"
+            app:layout_constraintBaseline_toBaselineOf="@id/textAmount"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/textAmount"
+            style="@style/TextLabel.Blue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:paddingVertical="@dimen/spacing_M"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Volkswagen AG" />
+
+        <TextView
+            style="@style/TextLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minWidth="60dp"
+            android:paddingEnd="@dimen/spacing_XL"
+            android:text="@string/recipient"
+            app:layout_constraintBaseline_toBaselineOf="@id/textRecipient"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/textRecipient"
+            style="@style/TextLabel.Blue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:paddingVertical="@dimen/spacing_M"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textAmount"
+            tools:text="Volkswagen AG" />
+
+        <TextView
+            style="@style/TextLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minWidth="60dp"
+            android:paddingEnd="@dimen/spacing_XL"
+            android:text="@string/type"
+            app:layout_constraintBaseline_toBaselineOf="@id/textType"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/textType"
+            style="@style/TextLabel.Blue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:paddingVertical="@dimen/spacing_M"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textRecipient"
+            tools:text="Volkswagen AG" />
+
+        <TextView
+            style="@style/TextLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minWidth="60dp"
+            android:paddingEnd="@dimen/spacing_XL"
+            android:text="@string/date"
+            app:layout_constraintBaseline_toBaselineOf="@id/textDate"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/textDate"
+            style="@style/TextLabel.Blue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:paddingVertical="@dimen/spacing_M"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textType"
+            tools:text="Volkswagen AG" />
+
+        <TextView
+            style="@style/TextLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minWidth="60dp"
+            android:paddingEnd="@dimen/spacing_XL"
+            android:text="@string/description"
+            app:layout_constraintBaseline_toBaselineOf="@id/textDescription"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/textDescription"
+            style="@style/TextLabel.Blue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:paddingVertical="@dimen/spacing_M"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textDate"
+            tools:text="Volkswagen AG" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

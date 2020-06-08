@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/spacing_XXL"
+    tools:context=".RequestActivity">
+
+    <TextView
+        android:id="@+id/textHeader"
+        style="@style/TextH1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:minHeight="@dimen/default_cell_height"
+        android:text="@string/request"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textTypeHeader"
+        style="@style/TextH2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:minHeight="@dimen/default_cell_height"
+        android:paddingBottom="@dimen/spacing_XS"
+        android:text="@string/type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textHeader" />
+
+    <Button
+        android:id="@+id/buttonEmail"
+        style="@style/UiButton.Blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_S"
+        android:gravity="center_vertical"
+        android:text="@string/email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textTypeHeader" />
+
+    <Button
+        android:id="@+id/buttonIban"
+        style="@style/UiButton.Green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_S"
+        android:gravity="center_vertical"
+        android:text="@string/iban"
+        app:layout_constraintEnd_toStartOf="@id/buttonPhone"
+        app:layout_constraintStart_toEndOf="@id/buttonEmail"
+        app:layout_constraintTop_toBottomOf="@id/textTypeHeader" />
+
+    <Button
+        android:id="@+id/buttonPhone"
+        style="@style/UiButton.Red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_S"
+        android:gravity="center_vertical"
+        android:text="@string/phone_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textTypeHeader" />
+
+    <TextView
+        android:id="@+id/textRecipientHeader"
+        style="@style/TextH2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:minHeight="@dimen/default_cell_height"
+        android:paddingBottom="@dimen/spacing_XS"
+        android:text="@string/sender"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonEmail"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/inputRecipient"
+        style="@style/TextH3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_S"
+        android:autofillHints="@string/recipient"
+        android:imeOptions="actionDone"
+        android:inputType="textVisiblePassword"
+        android:maxLength="25"
+        android:theme="@style/ThemeOverlay.TR.EditText"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textRecipientHeader"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textAmountHeader"
+        style="@style/TextH2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:minHeight="@dimen/default_cell_height"
+        android:paddingBottom="@dimen/spacing_XS"
+        android:text="@string/amount"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputRecipient"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textCurrency"
+        style="@style/TextH3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:minHeight="@dimen/default_cell_height"
+        android:paddingHorizontal="@dimen/spacing_M"
+        android:paddingBottom="@dimen/spacing_S"
+        android:text="@string/eur"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@id/inputAmount"
+        app:layout_constraintTop_toBottomOf="@id/inputRecipient"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/inputAmount"
+        style="@style/CurrencyEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_XL"
+        android:gravity="end"
+        android:hint="@string/amount_hint"
+        android:inputType="numberDecimal"
+        android:maxLength="7"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/textAmountHeader"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textDescriptionHeader"
+        style="@style/TextH2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:minHeight="@dimen/default_cell_height"
+        android:paddingBottom="4dp"
+        android:text="@string/description"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputAmount"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/inputDescription"
+        style="@style/TextH3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_S"
+        android:gravity="top"
+        android:hint="@string/description"
+        android:inputType="textMultiLine"
+        android:lines="4"
+        android:maxLength="50"
+        android:maxLines="4"
+        android:theme="@style/ThemeOverlay.TR.EditText"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textDescriptionHeader"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/buttonTransfer"
+        style="@style/UiButton.Confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_S"
+        android:gravity="center_vertical"
+        android:text="@string/request"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputDescription"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

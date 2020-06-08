@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  Spacings  -->
+    <dimen name="spacing_XXXXL">72dp</dimen>
+    <dimen name="spacing_XXXL">48dp</dimen>
+    <dimen name="spacing_XXL">36dp</dimen>
+    <dimen name="spacing_XL">24dp</dimen>
+    <dimen name="spacing_L">16dp</dimen>
+    <dimen name="spacing_M">12dp</dimen>
+    <dimen name="spacing_S">8dp</dimen>
+    <dimen name="spacing_XS">4dp</dimen>
+    <dimen name="spacing_XXS">2dp</dimen>
+
+    <!--  Text Size   -->
+    <dimen name="text_size_UL">72sp</dimen>
+    <dimen name="text_size_XXXL">40sp</dimen>
+    <dimen name="text_size_XXXLs">36sp</dimen>
+    <dimen name="text_size_XXL">24sp</dimen>
+    <dimen name="text_size_XL">21sp</dimen>
+    <dimen name="text_size_L">18sp</dimen>
+    <dimen name="text_size_M">16sp</dimen>
+    <dimen name="text_size_S">14sp</dimen>
+    <dimen name="text_size_XS">11sp</dimen>
+
+    <dimen name="default_cell_height">56dp</dimen>
+    <dimen name="medium_cell_height">48dp</dimen>
+    <dimen name="small_cell_height">36dp</dimen>
+
+    <!--  Text Appearance  -->
+    <item name="text_letter_spacing" format="float" type="dimen">0.08</item>
+
+    <!--  Common View Dimens  -->
+    <dimen name="default_border_radius">2dp</dimen>
+    <dimen name="default_divider_height">2dp</dimen>
+    <dimen name="toolbar_shadow_height">2dp</dimen>
+    <dimen name="base_bottom_sheet_radius">3dp</dimen>
+
+    <dimen name="default_icon_size">24dp</dimen>
+    <dimen name="large_icon_size">32dp</dimen>
+
+    <dimen name="text_size_timeline">14sp</dimen>
+    <dimen name="text_size_timeline_small">12sp</dimen>
+</resources>

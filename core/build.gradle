@@ -1,0 +1,10 @@
+apply from: '../core-android-library.gradle'
+
+
+dependencies {
+    //dagger
+    implementation 'com.google.dagger:dagger-android-support:2.27'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    kapt 'com.google.dagger:dagger-android-processor:2.27'
+    kapt 'com.google.dagger:dagger-compiler:2.27'
+}

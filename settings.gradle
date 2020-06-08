@@ -1,0 +1,5 @@
+include ':payment'
+include ':request'
+include ':core'
+include ':app'
+rootProject.name = "bunq home assignment"

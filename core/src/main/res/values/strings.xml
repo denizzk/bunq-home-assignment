@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">bunq home assignment</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="amount">AMOUNT</string>
+    <string name="payment">PAYMENT</string>
+    <string name="request">REQUEST</string>
+    <string name="new_payment">NEW PAYMENT</string>
+    <string name="new_request">NEW REQUEST</string>
+    <string name="recipient">RECIPIENT</string>
+    <string name="type">TYPE</string>
+    <string name="date">DATE</string>
+    <string name="description">DESCRIPTION</string>
+    <string name="iban">IBAN</string>
+    <string name="email">EMAIL</string>
+    <string name="name">NAME</string>
+    <string name="amount_hint">00</string>
+    <string name="transfer">TRANSFER</string>
+    <string name="sugar_daddy_email">sugardaddy@bunq.com</string>
+    <string name="iban_hint">DE85700700109827765712</string>
+    <string name="phone_number_hint">+4915250505050</string>
+    <string name="balance">Balance</string>
+    <string name="balance_value">€5,000,000</string>
+    <string name="hello">Hello,</string>
+    <string name="user">Deniz</string>
+    <string name="cash">%1$s %2$s</string>
+    <string name="phone_number">PHONE NUMBER</string>
+    <string name="payment_title">Payment</string>
+    <string name="payment_detail_success"> %1$s sent to %2$s successfully!</string>
+    <string name="request_title">Request</string>
+    <string name="request_detail_success"> Greetings %1$s, You just got %2$s from %3$s! Hooray!</string>
+    <string name="transaction_details">TRANSACTION DETAILS</string>
+    <string name="payment_details">PAYMENT DETAILS</string>
+    <string name="request_details">REQUEST DETAILS</string>
+    <string name="sender">SENDER</string>
+    <string name="eur">EUR</string>
+</resources>

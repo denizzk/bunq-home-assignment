@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutPayment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="80dp"
+    android:paddingEnd="@dimen/spacing_XL"
+    tools:ignore="RtlSymmetry">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalTimelineEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.18" />
+
+    <View
+        android:id="@+id/verticalLineTimelineEntryTop"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:background="@color/lightGrey"
+        app:layout_constraintBottom_toTopOf="@id/indicatorTimelineEntry"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVerticalTimelineEntry"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalTimelineEntry"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/indicatorTimelineEntry"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/indicator_dot_timeline"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVerticalTimelineEntry"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalTimelineEntry"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/verticalLineTimelineEntryBottom"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:background="@color/lightGrey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVerticalTimelineEntry"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalTimelineEntry"
+        app:layout_constraintTop_toBottomOf="@id/indicatorTimelineEntry" />
+
+    <ImageView
+        android:id="@+id/iconPayment"
+        android:layout_width="@dimen/default_icon_size"
+        android:layout_height="@dimen/default_icon_size"
+        android:layout_marginStart="@dimen/spacing_XL"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@null"
+        tools:src="@drawable/ic_transaction"
+        app:layout_constraintBottom_toBottomOf="@id/indicatorTimelineEntry"
+        app:layout_constraintEnd_toStartOf="@id/guidelineVerticalTimelineEntry"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/indicatorTimelineEntry" />
+
+    <TextView
+        android:id="@+id/textItemDate"
+        style="@style/TextLabel.Secondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/medium"
+        android:paddingBottom="@dimen/spacing_S"
+        app:layout_constraintEnd_toEndOf="@id/iconPayment"
+        app:layout_constraintStart_toStartOf="@id/iconPayment"
+        app:layout_constraintTop_toBottomOf="@id/iconPayment"
+        tools:text="09.12." />
+
+    <TextView
+        android:id="@+id/textHeadline"
+        style="@style/TextTimeline.Small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="4dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toStartOf="@id/barrierEnd"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/guidelineVerticalTimelineEntry"
+        app:layout_constraintTop_toTopOf="@id/indicatorTimelineEntry"
+        tools:text="Sell executed and much more text so probably this should work but the further I move the" />
+
+    <TextView
+        android:id="@+id/textContent"
+        style="@style/TextTimeline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="@dimen/spacing_XL"
+        android:paddingBottom="@dimen/spacing_S"
+        app:layout_constraintEnd_toStartOf="@id/barrierEnd"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/guidelineVerticalTimelineEntry"
+        app:layout_constraintTop_toBottomOf="@id/textHeadline"
+        tools:text="Volkswagen AG" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrierEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="start"
+        app:constraint_referenced_ids="textCash,iconArrow" />
+
+    <TextView
+        android:id="@+id/textCash"
+        style="@style/TextTimeline.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_S"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textHeadline"
+        tools:text="-4,243.12€" />
+
+    <ImageView
+        android:id="@+id/iconArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_right_arrow"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
